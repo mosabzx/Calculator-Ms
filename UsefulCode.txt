@@ -1,0 +1,139 @@
+﻿
+Method Calculate Addition for many numbers:
+
+ static void Plus()
+        {
+            
+            Console.WriteLine("Enter Numbers with (+) Operator: ");
+            
+            List<double> numlistinput = new List<double>();
+            List<double> numlist = new List<double>();
+            
+            numlistinput = Console.ReadLine().Split('+').Select(double.Parse).ToList();
+
+           
+            double result = numlistinput.Sum(z => Convert.ToDouble(z));
+            Console.WriteLine("The Result is: {0}",result);
+
+
+        }
+
+---------------------------------------------------------------------------
+
+Method Subtract for many numbers:
+
+ static void Sub()
+        {
+            Console.WriteLine("Enter Numbers with minus operator (-): ");
+            string numinput = Console.ReadLine();
+            string[] numbers = numinput.Split(',');
+            DataTable sub = new DataTable();
+            var values = numbers.Select(x => sub.Compute(x, null));
+            string result = String.Join(", ", values);
+            Console.WriteLine("The Result Is: {0}", result);
+
+
+
+
+        }
+
+--------------------------------------------------------------------------
+
+Method for Multiplication Operation :
+
+ static void Multi()
+        {
+            Console.WriteLine("Multiplication Operation!");
+            Console.WriteLine("Enter the first number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the second number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+            double result = num1 * num2;
+            Console.WriteLine("The result for Multiplication is: {0} .",result);
+           
+
+
+        }
+
+----------------------------------------------------------------------------
+Method for Division Operation:
+
+  static void Div()
+        {
+            Console.WriteLine("Division Operation!");
+            Console.WriteLine("Enter the first number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the second number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+            double result = num1 / num2;
+            Console.WriteLine("The result for Division is: {0} .", result);
+
+
+
+
+        }
+
+-------------------------------------------------------------------------------
+Method for Square Root:
+
+ static void Squrt()
+        {
+            Console.WriteLine("Square Root Operation (√)");
+            Console.WriteLine("Enter a number to get a Square Root: ");
+            double num = Convert.ToDouble(Console.ReadLine());
+            double squrt = Math.Sqrt(num);
+            Console.WriteLine("The result for Squre Root is: {0} .",squrt);
+
+        }
+----------------------------------------------------------------------------------
+
+Code for Menu Program Selection with loop:
+ static void Main(string[] args)
+        {
+            bool loop = true;
+            int choice;
+            while (loop)
+            {
+                Console.WriteLine("Welcome to Calculator Program, Please select an operation from the menu:\n" +
+               "1.Addition Operation (+).\n" +
+               "2.Subtraction Operation(-).\n" +
+               "3.Multiplication Operation(*).\n" +
+               "4.Division Operation(/).\n" +
+               "5.Exit.");
+                choice = Convert.ToInt32(Console.ReadLine());
+
+
+
+
+
+                switch (choice)
+                {
+                    case 1:
+                        Console.Clear();
+                        Plus();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Sub();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Multi();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Div();
+                        break;
+                    case 5:
+                        Console.WriteLine("Thank you GoodBye!");
+                        loop = false;
+                        break;
+                }
+
+            }
+
+
+
+            //Console.ReadLine();
+        }
+

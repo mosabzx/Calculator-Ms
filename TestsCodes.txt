@@ -1,0 +1,800 @@
+﻿Method Return Addtion :
+
+Console.WriteLine(Add(2,3));
+
+static double Add(double num1,double num2)
+        {
+            
+            double result = num1 + num2;
+            return result;
+
+        }
+
+---------------------------------------------------------
+Calculator input:
+
+            Console.WriteLine("Enter number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter an operation: ");
+            string op = Console.ReadLine();
+
+            Console.WriteLine("Enter number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+--------------------------------------------------------------
+Methods to return for input above:
+        static double Sub(double num1, double num2)
+        {
+            double result = num1 - num2;
+            return result;
+        }
+
+        static double Multi(double num1, double num2)
+        {
+            double result = num1 * num2;
+            return result;
+        }
+
+        static double Div(double num1, double num2)
+        {
+            double result = num1 / num2;
+            return result;
+        }
+
+-----------------------------------------------------------
+
+Calculator version 1:
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter first number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter an operation: ");
+            string op = Console.ReadLine();
+
+            Console.WriteLine("Enter second number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+
+            double plus = Plus(num1, num2);
+            double sub =  Sub(num1, num2);
+            double multi = Multi(num1, num2);
+            double div = Div(num1, num2);
+
+            if (op == "+")
+            {
+                Console.WriteLine(plus);
+            }
+            else if (op == "-")
+            {
+                Console.WriteLine(sub);
+            }
+            else if (op == "*")
+            {
+                Console.WriteLine(multi);
+            }
+            else if (op == "/")
+            {
+                Console.WriteLine(div);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Operator!");
+            }
+
+            Console.ReadLine();
+        }
+
+        
+        static double Plus(double num1, double num2)
+        {
+            double result = num1 + num2;
+            return result;
+        }
+
+
+        static double Sub(double num1, double num2)
+        {
+            double result = num1 - num2;
+            return result;
+        }
+
+        static double Multi(double num1, double num2)
+        {
+            double result = num1 * num2;
+            return result;
+        }
+
+        static double Div(double num1, double num2)
+        {
+            double result = num1 / num2;
+            return result;
+        }
+
+---------------------------------------------------------------------
+
+Plus Method :
+ static void Plus()
+        {
+            Console.WriteLine("Enter number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter an operation: ");
+            string op = Console.ReadLine();
+
+            Console.WriteLine("Enter number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            if (op == "+")
+            {
+                Console.WriteLine(num1 + num2);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Operator!");
+            }
+        }
+
+---------------------------------------------------------------------
+Calculator Version.2 :
+
+ static void Main(string[] args)
+        {
+            bool loop = true;
+            int choice;
+            while (loop)
+            {
+                Console.WriteLine("Welcome to Calculator Program, Please select an operation from the menu:\n" +
+               "1.Addition Operation (+).\n" +
+               "2.Subtraction Operation(-).\n" +
+               "3.Multiplication Operation(*).\n" +
+               "4.Division Operation(/).\n" +
+               "5.Exit.");
+                choice = Convert.ToInt32(Console.ReadLine());
+
+
+
+
+
+                switch (choice)
+                {
+                    case 1:
+                        Console.Clear();
+                        Plus();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Sub();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Multi();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Div();
+                        break;
+                    case 5:
+                        Console.WriteLine("Thank you GoodBye!");
+                        loop = false;
+                        break;
+                }
+
+            }
+
+
+
+            //Console.ReadLine();
+        }
+
+        
+       static void Plus()
+        {
+            Console.WriteLine("Enter number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter an operation: ");
+            string op = Console.ReadLine();
+
+            Console.WriteLine("Enter number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            if (op == "+")
+            {
+                Console.WriteLine("The Result: " + (num1 + num2));
+            }
+            else
+            {
+                Console.WriteLine("Invalid Operator!");
+            }
+        }
+        
+
+        static void Sub()
+        {
+            Console.WriteLine("Enter number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter an operation: ");
+            string op = Console.ReadLine();
+
+            Console.WriteLine("Enter number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            if (op == "-")
+            {
+                Console.WriteLine("The Result: " + (num1 - num2));
+            }
+            else
+            {
+                Console.WriteLine("Invalid Operator!");
+            }
+        }
+
+        static void Multi()
+        {
+            Console.WriteLine("Enter number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter an operation: ");
+            string op = Console.ReadLine();
+
+            Console.WriteLine("Enter number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            if (op == "*")
+            {
+                Console.WriteLine("The Result: " + (num1 * num2));
+            }
+            else
+            {
+                Console.WriteLine("Invalid Operator!");
+            }
+        }
+
+        static void Div()
+        {
+            Console.WriteLine("Enter number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter an operation: ");
+            string op = Console.ReadLine();
+
+            Console.WriteLine("Enter number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            if (op == "/")
+            {
+                Console.WriteLine("The Result: " + (num1 / num2));
+            }
+            else
+            {
+                Console.WriteLine("Invalid Operator!");
+            }
+        }
+
+-----------------------------------------------------------------------
+
+Draft 1 For Plus Method with multi numbers:
+
+ static void Plus()
+        {
+            Console.WriteLine("Enter Numbers separate with (+): ");
+            
+            List<double> numlistinput = new List<double>();
+            List<double> numlist = new List<double>();
+           
+            numlistinput = Console.ReadLine().Split('+').Select(double.Parse).ToList();
+            foreach(var item in numlistinput)
+            {
+                numlist.Add(item);
+                
+            }
+            foreach (double z in numlistinput)
+                foreach(double x in numlist)
+                {
+                    if (z != x)
+                    {
+                        Console.WriteLine(z + x);
+                    }
+                        
+                    
+                }
+
+---------------------------------------------------------------------
+
+ Method for Additon Operation Take many numbers from userinput and give Sum result:
+ 
+ 
+ static void Plus()
+        {
+            Console.WriteLine("Enter Numbers separate with (+): ");
+            
+            List<double> numlistinput = new List<double>();
+            List<double> numlist = new List<double>();
+            
+            numlistinput = Console.ReadLine().Split('+').Select(double.Parse).ToList();
+
+            Console.WriteLine(numlistinput.Sum(z => Convert.ToInt32(z)));
+
+
+---------------------------------------------------------------------------------
+Expression Subtraction Metohd:
+
+ Expression sub = Expression.Subtract(Expression.Constant(10), Expression.Constant(11));
+            Console.WriteLine(sub.ToString());
+            Console.WriteLine(Expression.Lambda<Func<int>>(sub).Compile().Invoke());
+
+-----------------------------------------------------------------------------------
+
+Converting List to Array:
+double[] numArray = numlistinput.ToArray();
+
+--------------------------------------------------------------
+
+Code get subtract the list elements : 
+ List<int> list = new List<int>() { 10, 15, 17, 27 };
+
+
+            var result = (from e in list
+
+                          let nextindex = list.IndexOf(e) + 1
+
+                          let nextelement = list.ElementAt(nextindex == list.Count ? nextindex - 1 : nextindex)
+
+                          select nextelement - e).ToList();
+
+            result.RemoveAt(list.Count - 1);
+
+            foreach(var item in result)
+            {
+                Console.WriteLine(item);
+            }
+----------------------------------------------------------------------------------
+
+Code to calculate subtract many numbers togther:
+
+string numbers = "1-2-5-3";
+            string[] equations = numbers.Split(',');
+            DataTable dt = new DataTable();
+            var values = equations.Select(x => dt.Compute(x, null));
+            var output = string.Join(", ", values);
+            Console.WriteLine(output);
+---------------------------------------------------------------------------------
+
+Calculator Program Version 3.:
+
+ static void Main(string[] args)
+        {
+
+            bool loop = true;
+            int choice;
+            while (loop)
+            {
+                Console.WriteLine("Welcome to Calculator Program, Please select an operation from the menu:\n" +
+               "1.Addition Operation (+).\n" +
+               "2.Subtraction Operation(-).\n" +
+               "3.Multiplication Operation(*).\n" +
+               "4.Division Operation(/).\n" +
+               "5.Square Root Operation (√)\n" +
+               "6.Power ^2 Operation (^2).\n" +
+               "7.Exit.");
+
+                choice = Convert.ToInt32(Console.ReadLine());
+
+
+
+
+
+                switch (choice)
+                {
+                    case 1:
+                        Console.Clear();
+                        Plus();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Sub();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Multi();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Div();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Squrt();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Pow2();
+                        break;
+                    case 7:
+                        Console.WriteLine("Thank you GoodBye!");
+                        loop = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Choice, please try again");
+                        break;
+
+                }
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+
+
+            
+        }
+
+        
+       static void Plus()
+        {
+            try
+            {
+                Console.WriteLine("Addition Operation (+)");
+                Console.WriteLine("Enter Numbers Separated with (+) Operator: ");
+
+                List<double> numlistinput = new List<double>();
+                List<double> numlist = new List<double>();
+
+                numlistinput = Console.ReadLine().Split('+').Select(double.Parse).ToList();
+
+
+                double result = numlistinput.Sum(z => Convert.ToDouble(z));
+                Console.WriteLine("The result for (Addition) is: {0} .", result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("Please enter valid format numbers !");
+            }
+            
+            
+
+        }
+
+
+        static void Sub()
+        {
+            try
+            {
+                Console.WriteLine("Subtraction Operation (-)");
+                Console.WriteLine("Enter Numbers separated with (-) operator : ");
+                string numinput = Console.ReadLine();
+                string[] numbers = numinput.Split(',');
+                DataTable sub = new DataTable();
+                var values = numbers.Select(x => sub.Compute(x, null));
+                string result = String.Join(", ", values);
+                Console.WriteLine("The result for (Subtraction) is: {0} .", result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("Please enter valid format numbers and must be separated by (-)!");
+            }
+           
+
+        }
+
+
+        static void Multi()
+        {
+            Console.WriteLine("Multiplication Operation (X)");
+            Console.WriteLine("Enter the first number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the second number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+            double result = num1 * num2;
+            Console.WriteLine("The result for (Multiplication) is: {0} .",result);
+           
+        }
+
+
+        static void Div()
+        {
+            Console.WriteLine("Division Operation (/)");
+            Console.WriteLine("Enter the first number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the second number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+            double result = num1 / num2;
+            Console.WriteLine("The result for (Division) is: {0} .", result);
+
+        }
+
+
+        static void Squrt()
+        {
+            Console.WriteLine("Square Root Operation (√)");
+            Console.WriteLine("Enter a number to get a Square Root: ");
+            double num = Convert.ToDouble(Console.ReadLine());
+            double squrt = Math.Sqrt(num);
+            Console.WriteLine("The result for (Squre Root) is: {0} .",squrt);
+
+        }
+
+
+        static void Pow2()
+        {
+            Console.WriteLine("Power ^2 Operation (^2)");
+            Console.WriteLine("Enter a number to get ^2 for it: ");
+            double num = Convert.ToDouble(Console.ReadLine());
+            double pow = Math.Pow(num, 2);
+            Console.WriteLine("The result for (Power ^2)  is: {0} .", pow);
+
+
+
+        }
+
+
+
+    }
+
+------------------------------------------------------------------------------------------
+
+Calculator Program v.4:
+
+ static void Main(string[] args)
+        {
+
+            bool loop = true;
+            int choice;
+            
+            
+
+            while (loop)
+            {
+                
+                
+                Console.WriteLine("Welcome to Calculator Program, Please select an operation from the menu:\n" +
+                "1.Addition Operation (+).\n" +
+                "2.Subtraction Operation(-).\n" +
+                "3.Multiplication Operation(*).\n" +
+                "4.Division Operation(/).\n" +
+                "5.Square Root Operation (√)\n" +
+                "6.Power ^2 Operation (^2).\n" +
+                "7.Exit.");
+
+
+                //choice = Convert.ToInt32(Console.ReadLine());
+                //Get an Exeption error when user press enter without selecting any number.
+                    
+                int.TryParse(Console.ReadLine(),out choice); // This more useful.
+                    
+                    
+
+
+                switch (choice)
+                {
+                    case 1:
+                        Console.Clear();
+                        Plus();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Sub();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Multi();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Div();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Squrt();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Pow2();
+                        break;
+                    case 7:
+                        Console.WriteLine("Thank you Program has been shutting down!");
+                        loop = false;
+                        break;
+                        
+
+                    default:
+                            
+                        Console.WriteLine("Invalid Choice, please try again");
+                        break;
+
+
+                }
+                Console.ReadKey();
+                Console.Clear();
+
+           
+
+            }
+
+
+            
+        }
+
+        
+       static void Plus()
+        {
+            try
+            {
+                Console.WriteLine("Addition Operation (+)");
+                Console.WriteLine("Enter Numbers Separated with (+) Operator: ");
+
+                List<double> numlistinput = new List<double>();
+                List<double> numlist = new List<double>();
+
+                numlistinput = Console.ReadLine().Split('+').Select(double.Parse).ToList();
+
+
+                double result = numlistinput.Sum(z => Convert.ToDouble(z));
+                Console.WriteLine("The result for (Addition) is: {0} .", result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("Please enter valid format numbers !");
+            }
+            
+            
+
+        }
+
+
+        static void Sub()
+        {
+            try
+            {
+                Console.WriteLine("Subtraction Operation (-)");
+                Console.WriteLine("Enter Numbers separated with (-) operator : ");
+                string numinput = Console.ReadLine();
+                string[] numbers = numinput.Split(',');
+                DataTable sub = new DataTable();
+                var values = numbers.Select(x => sub.Compute(x, null));
+                string result = String.Join(", ", values);
+                Console.WriteLine("The result for (Subtraction) is: {0} .", result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("Please enter valid format numbers and must be separated by (-)!");
+            }
+           
+
+        }
+
+
+        static void Multi()
+        {
+            try
+            {
+                Console.WriteLine("Multiplication Operation (X)");
+                Console.WriteLine("Enter the first number: ");
+                double num1 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Enter the second number: ");
+                double num2 = Convert.ToDouble(Console.ReadLine());
+                double result = num1 * num2;
+                Console.WriteLine("The result for (Multiplication) is: {0} .", result);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+           
+           
+        }
+
+
+        static void Div()
+        {
+            try
+            {
+                Console.WriteLine("Division Operation (/)");
+                Console.WriteLine("Enter the first number: ");
+                double num1 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Enter the second number: ");
+                double num2 = Convert.ToDouble(Console.ReadLine());
+                double result = num1 / num2;
+                Console.WriteLine("The result for (Division) is: {0} .", result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            
+
+        }
+
+
+        static void Squrt()
+        {
+            try
+            {
+                Console.WriteLine("Square Root Operation (√)");
+                Console.WriteLine("Enter a number to get a Square Root: ");
+                double num = Convert.ToDouble(Console.ReadLine());
+                double squrt = Math.Sqrt(num);
+                Console.WriteLine("The result for (Squre Root) is: {0} .", squrt);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
+
+        }
+
+
+        static void Pow2()
+        {
+            try
+            {
+                Console.WriteLine("Power ^2 Operation (^2)");
+                Console.WriteLine("Enter a number to get ^2 for it: ");
+                double num = Convert.ToDouble(Console.ReadLine());
+                double pow = Math.Pow(num, 2);
+                Console.WriteLine("The result for (Power ^2)  is: {0} .", pow);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------
+
+
+
+
+
+
